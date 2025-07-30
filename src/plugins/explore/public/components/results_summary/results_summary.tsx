@@ -40,7 +40,9 @@ export const ResultsSummary: React.FC<ResultsSummaryProps> = ({
   );
   const dataSetState = useSelector(selectDataset);
   const queryResults = useSelector(
-    (state: RootState) => state.results[state.query.query as string]?.hits?.hits
+    (state: RootState) =>
+      state.results[state.query.query as string]?.hits?.hits ||
+      Object.values(state.results)[0]?.hits?.hits // default query results
   );
   const queryStatus = useSelector(selectQueryStatus);
 
