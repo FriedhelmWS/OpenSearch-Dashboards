@@ -58,6 +58,7 @@ export const TriggerPopover = ({
             pplQuery: query.query,
             pplFilters: data.query.filterManager.getFilters(),
           },
+          notebookType: 'Agentic',
           initialGoal: value,
           ...(log ? { log } : {}),
         },
