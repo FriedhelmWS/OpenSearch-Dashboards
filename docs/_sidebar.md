@@ -32,15 +32,18 @@
       - [Build](../src/dev/build/README.md)
       - [I18n](../src/dev/i18n/README.md)
     - plugins
+      - [Ai_chatbot](../src/plugins/ai_chatbot/README.md)
       - [Application_config](../src/plugins/application_config/README.md)
       - [Banner](../src/plugins/banner/README.md)
       - [Bfetch](../src/plugins/bfetch/README.md)
       - [Charts](../src/plugins/charts/README.md)
+      - [Chat](../src/plugins/chat/README.md)
       - console
         - public
           - application
             - [Hooks](../src/plugins/console/public/application/hooks/README.md)
       - [Content_management](../src/plugins/content_management/README.md)
+      - [Context_provider](../src/plugins/context_provider/README.md)
       - [Csp_handler](../src/plugins/csp_handler/README.md)
       - [Dashboard](../src/plugins/dashboard/README.md)
       - [Data](../src/plugins/data/README.md)
@@ -208,8 +211,10 @@
   - [CHANGELOG](../CHANGELOG.md)
   - [CODE_OF_CONDUCT](../CODE_OF_CONDUCT.md)
   - [COMMUNICATIONS](../COMMUNICATIONS.md)
+  - [COMPREHENSIVE_DESIGN_DOCUMENT](../COMPREHENSIVE_DESIGN_DOCUMENT.md)
   - [CONTRIBUTING](../CONTRIBUTING.md)
   - [DEVELOPER_GUIDE](../DEVELOPER_GUIDE.md)
+  - [ERROR_FIXES_SUMMARY](../ERROR_FIXES_SUMMARY.md)
   - [MAINTAINERS](../MAINTAINERS.md)
   - [README](../README.md)
   - [RELEASING](../RELEASING.md)
@@ -217,4 +222,6 @@
   - [TESTING](../TESTING.md)
   - [TRIAGING](../TRIAGING.md)
   - [TYPESCRIPT](../TYPESCRIPT.md)
+  - [UI_ACTIONS_DEPENDENCY_INJECTION_SOLUTION](../UI_ACTIONS_DEPENDENCY_INJECTION_SOLUTION.md)
+  - [Practical_global_implementation_example](../practical_global_implementation_example.md)
   - [Testing_strategy](../testing_strategy.md)
