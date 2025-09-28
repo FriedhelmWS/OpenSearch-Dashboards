@@ -27,26 +27,24 @@ export const TriggerPopover = ({
     services: { data, core },
   } = useOpenSearchDashboards<ExploreServices>();
 
-  const time = useMemo(() => {
-    const bounds = data.query.timefilter.timefilter.getBounds();
-    return {
-      selectionFrom: (bounds.min?.unix() ?? 0) * 1000,
-      selectionTo: (bounds.max?.unix() ?? 0) * 1000,
-    };
-  }, [data.query.timefilter.timefilter]);
-
   const currentTime = useMemo(() => {
     return new Date().getTime();
   }, []);
 
   const createNotebook = async (name: string) => {
     const query = data.query.queryString.getQuery();
+    const bounds = data.query.timefilter.timefilter.getBounds();
+    const selectionFrom = (bounds.min?.unix() ?? 0) * 1000;
+    const selectionTo = (bounds.max?.unix() ?? 0) * 1000;
     const id = await core.http.post<string>('/api/investigation/note/savedNotebook', {
       body: JSON.stringify({
         name,
         context: {
           dataSourceId: query.dataset?.dataSource?.id ?? '',
-          timeRange: time,
+          timeRange: {
+            selectionFrom,
+            selectionTo,
+          },
           source: 'Discover',
           timeField: query.dataset?.timeFieldName ?? '',
           index: query.dataset?.title ?? '',
